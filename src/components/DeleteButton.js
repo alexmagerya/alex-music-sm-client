@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; //imports
 import gql from 'graphql-tag';
-//import { useMutation } from '@apollo/client';
+//import { useMutation } from '@apollo/client'; //use this tag instead of bottom ones if using apollo v3, instead v2
 import { useMutation } from '@apollo/react-hooks';
 import { Button, Confirm, Icon } from 'semantic-ui-react';
 

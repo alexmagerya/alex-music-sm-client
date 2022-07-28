@@ -1,4 +1,5 @@
-import React, { useContext } from 'react';
+import React, { useContext } from 'react'; //imports
+//import { useQuery } from '@apollo/client'; //use this tag instead of bottom ones if using apollo v3, instead v2
 import { useQuery } from '@apollo/react-hooks';
 import { Grid, Transition } from 'semantic-ui-react';
 
@@ -9,15 +10,15 @@ import { FETCH_POSTS_QUERY } from '../util/graphql';
 
 function Home() {
   const { user } = useContext(AuthContext);
-  const {
-    loading,
-    data: { getPosts: posts }
-  } = useQuery(FETCH_POSTS_QUERY);
+
+  const { loading, data } = useQuery(FETCH_POSTS_QUERY)
+
+  const posts = data?.getPosts;
 
   return (
     <Grid columns={3}>
       <Grid.Row className="page-title">
-        <h1>Recent Posts</h1>
+        <h1>Recents</h1>
       </Grid.Row>
       <Grid.Row>
         {user && (
@@ -26,7 +27,7 @@ function Home() {
           </Grid.Column>
         )}
         {loading ? (
-          <h1>Loading posts..</h1>
+          <h1>Wait</h1>
         ) : (
           <Transition.Group>
             {posts &&

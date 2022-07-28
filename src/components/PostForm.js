@@ -1,6 +1,7 @@
-import React from 'react';
+import React from 'react'; //imports
 import { Button, Form } from 'semantic-ui-react';
 import gql from 'graphql-tag';
+//import { useMutation } from '@apollo/client'; //use this tag instead of bottom ones if using apollo v3, instead v2
 import { useMutation } from '@apollo/react-hooks';
 
 import { useForm } from '../util/hooks';
@@ -33,7 +34,7 @@ function PostForm() {
         <h2>Create a post:</h2>
         <Form.Field>
           <Form.Input
-            placeholder="Hi World!"
+            placeholder="Make a post"
             name="body"
             onChange={onChange}
             value={values.body}

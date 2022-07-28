@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'; //imports
 import { Link } from 'react-router-dom';
+//import { useMutation } from '@apollo/client'; //use this tag instead of bottom ones if using apollo v3, instead v2
 import { useMutation } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 import { Button, Label, Icon } from 'semantic-ui-react';

@@ -1,16 +1,9 @@
-import React, { useContext, useState, useRef } from 'react';
+import React, { useContext, useState, useRef } from 'react'; //imports
 import gql from 'graphql-tag';
+//import { useQuery, useMutation } from '@apollo/client' //use this tag instead of bottom ones if using apollo v3, instead v2
 import { useQuery, useMutation } from '@apollo/react-hooks';
 import moment from 'moment';
-import {
-  Button,
-  Card,
-  Form,
-  Grid,
-  Image,
-  Icon,
-  Label
-} from 'semantic-ui-react';
+import { Button, Card, Form, Grid, Icon, Label } from 'semantic-ui-react';
 
 import { AuthContext } from '../context/auth';
 import LikeButton from '../components/LikeButton';
@@ -66,11 +59,11 @@ function SinglePost(props) {
       <Grid>
         <Grid.Row>
           <Grid.Column width={2}>
-            <Image
+            {/* <Image
               src="https://react.semantic-ui.com/images/avatar/large/molly.png"
               size="small"
               float="right"
-            />
+            /> */}
           </Grid.Column>
           <Grid.Column width={10}>
             <Card fluid>

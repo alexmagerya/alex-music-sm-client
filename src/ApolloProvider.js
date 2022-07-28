@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; //imports
 import App from './App';
 import ApolloClient from 'apollo-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
@@ -9,7 +9,7 @@ import { setContext } from 'apollo-link-context';
 //import { ApolloClient, createHttpLink, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 const httpLink = createHttpLink({
-  uri: 'http://"proxy": "https://morning-island-79260.herokuapp.com":8000' //differs based on if it's production or not
+  uri: "https://morning-island-79260.herokuapp.com" //differs based on if it's production or not
 });
 
 const authLink = setContext(() => {
