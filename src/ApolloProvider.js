@@ -9,7 +9,7 @@ import { setContext } from 'apollo-link-context';
 //import { ApolloClient, createHttpLink, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 const httpLink = createHttpLink({
-  uri: 'http://localhost:8000'
+  uri: 'http://"proxy": "https://morning-island-79260.herokuapp.com":8000' //differs based on if it's production or not
 });
 
 const authLink = setContext(() => {
